@@ -76,14 +76,21 @@ public class BoardMapperTests {
 //		log.info("UPDATE COUNT: " + count);
 //	}
 	
+//	@Test
+//	public void testPaging() {
+//		Criteria cri = new Criteria();
+//		cri.setAmount(10);
+//		cri.setPageNum(3);
+//		List<BoardVO> list = mapper.getListWithPaging(cri);
+//		
+//		list.forEach(board -> log.info(board.getBno()));
+//	}
+	
 	@Test
-	public void testPaging() {
+	public void testTotalCount() {
 		Criteria cri = new Criteria();
-		cri.setAmount(10);
-		cri.setPageNum(3);
-		List<BoardVO> list = mapper.getListWithPaging(cri);
 		
-		list.forEach(board -> log.info(board.getBno()));
+		log.info(mapper.getTotalCount(cri));
 	}
 	
 }
