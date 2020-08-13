@@ -86,11 +86,19 @@ public class BoardMapperTests {
 //		list.forEach(board -> log.info(board.getBno()));
 //	}
 	
+//	@Test
+//	public void testTotalCount() {
+//		Criteria cri = new Criteria();
+//		
+//		log.info(mapper.getTotalCount(cri));
+//	}
+	
 	@Test
-	public void testTotalCount() {
+	public void testSearch() {
 		Criteria cri = new Criteria();
 		
-		log.info(mapper.getTotalCount(cri));
+		List<BoardVO> list = mapper.getListWithPaging(cri);
+		list.forEach(board -> log.info(board));
 	}
 	
 }
